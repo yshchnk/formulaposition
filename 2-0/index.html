@@ -5,6 +5,7 @@
     <meta name="description" content="Генератор формули для підтягування позицій з Google таблиць.">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8NBLZQ3P6"></script>
     <script>
@@ -86,7 +87,11 @@
   <body>
     <div class="wrapper">
     <h1>Генератор формули через службовий аркуш</h1>
-    <p>У файлі проекту необхідно створити аркуш "poz" В комірку A2 вставити отриману формулу</p>
+    <ol>
+      <li>У файлі проекту необхідно створити службовий аркуш «<b>poz</b>».</li>
+      <li>В комірки <b>A1</b> та <b>B1</b> вказати "Запит" та якусь дату (CTRL + ;).</li>
+      <li>В комірку <b>A2</b> вставити отриману нижче формулу.</li>
+    </ol>
     <form>
       <label for="form-select">Кількість файлів у проекті:</label>
       <select id="form-select">
@@ -113,13 +118,13 @@
       </div>
       <button id="getResultBtn" type="button">Отримати формулу</button><br><br><br>
       <textarea id="result" name="result" readonly rows="12" placeholder="Тут буде ваша формула"></textarea><br>
-      <button id="copyResultBtn" type="button">Скопіювати формулу</button><br><br><br><br>
+      <button id="copyResultBtn" type="button"><i class="fa fa-copy"></i> Скопіювати формулу</button><br><br><br><br>
 
       <label for="word">Комірка з запитом (A2):</label>
       <input type="text" id="word" placeholder="A2" size="5">
       <button id="getFormulaBtn" type="button">Отримати VLOOKUP</button><br><br>
       <textarea id="formula" name="formula" readonly rows="1" ></textarea><br><br>
-      <button id="copyFormulaBtn" type="button">Скопіювати VLOOKUP</button>
+      <button id="copyFormulaBtn" type="button"><i class="fa fa-copy"></i> Скопіювати VLOOKUP</button>
     </form>
     </div>
     <script>

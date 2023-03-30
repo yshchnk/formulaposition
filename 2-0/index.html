@@ -170,7 +170,7 @@
         result.select();
         document.execCommand("copy");
         alert("Формулу скопійовано");
-      };
+      });
 
       document.getElementById("getFormulaBtn").addEventListener("click", function() {
         var word = document.getElementById("word").value;
@@ -184,9 +184,7 @@
         formula.select();
         document.execCommand("copy");
         alert("VLOOKUP скопійовано");
-      }
-
-      );
+      });
     </script>
   </body>
 </html>

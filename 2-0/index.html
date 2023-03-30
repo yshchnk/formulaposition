@@ -113,7 +113,13 @@
       </div>
       <button id="getResultBtn" type="button">Отримати формулу</button><br><br><br>
       <textarea id="result" name="result" readonly rows="12" placeholder="Тут буде ваша формула"></textarea><br>
-      <button id="copyResultBtn" type="button">Скопіювати формулу</button>
+      <button id="copyResultBtn" type="button">Скопіювати формулу</button><br><br><br><br>
+
+      <label for="word">Комірка з запитом (A2):</label>
+      <input type="text" id="word" placeholder="A2" size="5">
+      <button id="getFormulaBtn" type="button">Отримати VLOOKUP</button><br><br>
+      <textarea id="formula" name="formula" readonly rows="1" ></textarea><br><br>
+      <button id="copyFormulaBtn" type="button">Скопіювати VLOOKUP</button>
     </form>
     </div>
     <script>
@@ -164,7 +170,9 @@
         result.select();
         document.execCommand("copy");
         alert("Формула скопійована");
-      });
+      }
+
+      );
     </script>
   </body>
 </html>

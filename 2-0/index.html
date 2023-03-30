@@ -169,7 +169,14 @@
         var result = document.getElementById("result");
         result.select();
         document.execCommand("copy");
-        alert("Формула скопійована");
+        alert("Формулу скопійовано");
+      }
+
+      document.getElementById("copyFormulaBtn").addEventListener("click", function() {
+        var result = document.getElementById("formula");
+        result.select();
+        document.execCommand("copy");
+        alert("VLOOKUP скопійовано");
       }
 
       );

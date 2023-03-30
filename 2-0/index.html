@@ -172,9 +172,16 @@
         alert("Формулу скопійовано");
       }
 
+      document.getElementById("getFormulaBtn").addEventListener("click", function() {
+        var word = document.getElementById("word").value;
+        var formula = '=VLOOKUP($' + word + ';poz!$A:$B;2;0)';
+        
+        document.getElementById("formula").value = formula;
+      });
+
       document.getElementById("copyFormulaBtn").addEventListener("click", function() {
-        var result = document.getElementById("formula");
-        result.select();
+        var formula = document.getElementById("formula");
+        formula.select();
         document.execCommand("copy");
         alert("VLOOKUP скопійовано");
       }
